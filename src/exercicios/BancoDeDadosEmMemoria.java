@@ -1,13 +1,15 @@
 package exercicios;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+
+import colecoes.UnmodifiableList;
 
 public class BancoDeDadosEmMemoria implements BancoDeDados {
 
 	private List<Pessoa> pessoas = new ArrayList<Pessoa>();
-	private List<Pessoa> pessoasNaoModificavel = Collections.unmodifiableList(this.pessoas);
+	private List<Pessoa> pessoasNaoModificavel = 
+			new UnmodifiableList<Pessoa>(this.pessoas);
 	
 	@Override
 	public void adicionar(Pessoa pessoa) {
@@ -16,8 +18,7 @@ public class BancoDeDadosEmMemoria implements BancoDeDados {
 
 	@Override
 	public void remover(Pessoa pessoa) {
-		// TODO Auto-generated method stub
-		
+		this.pessoas.remove(pessoa);
 	}
 
 	@Override
@@ -27,16 +28,12 @@ public class BancoDeDadosEmMemoria implements BancoDeDados {
 
 	@Override
 	public Pessoa encontrarPessoaPeloNome(String nome) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Pessoa encontrarPessoaPeloCPF(String cpf) {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
-	
 	
 }
