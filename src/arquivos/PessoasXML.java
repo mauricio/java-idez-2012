@@ -38,7 +38,21 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 	 */
 	
-	public Collection<Pessoa> ler( File file ) {
+	/**
+	 * 
+	 * @param file
+	 * @return
+	 * @throws IllegalStateException é lançada quando não for possível ler o arquivo
+	 * @throws IllegalArgumentException é lançada quando o arquivo XML não for 
+	 * válido
+	 */
+	
+	public Collection<Pessoa> ler( File file ) 
+			throws 
+			IllegalStateException, 
+			IllegalArgumentException,
+			IOException
+			{
 		
 		Collection<Pessoa> pessoas = new ArrayList<Pessoa>();
 		

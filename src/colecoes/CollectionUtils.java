@@ -19,10 +19,10 @@ public class CollectionUtils {
 		return result;
 	}
 	
-	public static <IN,OUT> OUT foldLeft( 
-			Collection<IN> collection, FoldLeft<OUT, IN> fold) {
+	public static <ACC,IN> ACC foldLeft( 
+			Collection<IN> collection, FoldLeft<ACC, IN> fold) {
 		
-		OUT result = null;
+		ACC result = null;
 		
 		
 		
