@@ -69,7 +69,7 @@ import javax.xml.stream.XMLStreamReader;
 			throw new IllegalStateException("Problema lendo do arquivo", e);
 		} catch ( XMLStreamException e ) {
 			System.out.println( "Erro de sintaxe!" );
-			throw new IllegalArgumentException("Problema de sintaxe no XML", e);
+			throw new XMLInvalidoException(file, "Problema de sintaxe no XML", e);
 		} finally {
 			IOUtils.close(reader);
 			System.out.println( "Finally rodando!" );

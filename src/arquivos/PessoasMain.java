@@ -8,7 +8,12 @@ public class PessoasMain {
 	public static void main(String[] args) throws IOException {
 		
 		PessoasXML xml = new PessoasXML();		
-		xml.ler( new File("pessoas.xml") );
+		try {
+			xml.ler( new File("pessoas.xml") );
+		} catch ( XMLInvalidoException e ) {
+			e.printStackTrace();
+			System.out.printf("O erro foi no arquivo %s%n", e.getFile().getAbsolutePath());
+		}
 		System.out.println("José");
 		
 	}

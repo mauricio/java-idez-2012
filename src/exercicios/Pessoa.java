@@ -1,6 +1,6 @@
 package exercicios;
 
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa> {
 
 	private String cpf;
 	private String nome;
@@ -10,6 +10,11 @@ public class Pessoa {
 	public Pessoa( String cpf, String nome ) {
 		this.cpf = cpf;
 		this.nome = nome;
+	}
+	
+	@Override
+	public int compareTo(Pessoa o) {		
+		return this.getNome().compareTo( o.getNome() ) * -1;
 	}
 	
 	public String getCpf() {
@@ -44,6 +49,12 @@ public class Pessoa {
 		}
 		
 		return resultado;
+	}
+
+	
+	@Override
+	public String toString() {
+		return String.format("%s - %s", this.getNome(), this.getCpf());
 	}
 	
 }
