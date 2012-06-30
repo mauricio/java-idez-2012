@@ -1,0 +1,5 @@
+CREATE TABLE clientes ( 
+id IDENTITY PRIMARY KEY, 
+nome VARCHAR_IGNORECASE ( 10000 ), 
+cpf VARCHAR_IGNORECASE ( 10000 ), 
+data_de_nascimento DATETIME );
