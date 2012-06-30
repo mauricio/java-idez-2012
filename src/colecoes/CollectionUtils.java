@@ -3,6 +3,11 @@ package colecoes;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import annotations.ClassInfo;
+
+@ClassInfo(
+		criadaEm="30/06/2012",
+		criadaPor="Maurício Linhares")
 public class CollectionUtils {
 
 	private CollectionUtils() {}
