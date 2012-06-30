@@ -3,7 +3,7 @@ package xml;
 @Serializavel(nome="pessoa")
 public class Pessoa {
 
-	@Propriedade(nome="nome-completo")
+	@Propriedade("nome-completo")
 	private String nome;
 	
 	public String getNome() {

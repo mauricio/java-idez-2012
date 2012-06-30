@@ -3,11 +3,21 @@ package xml;
 @Serializavel(nome = "pessoa-juridica")
 public class PessoaJuridica {
 
-	@Propriedade(nome="cnpj")
+	@Propriedade
 	private String cnpj;
 	
-	@Propriedade(nome="inscricao-estadual")
+	@Propriedade("inscricao-estadual")
 	private String inscricaoEstadual;
+	
+	private String nomeDeFantasia;
+	
+	public String getNomeDeFantasia() {
+		return nomeDeFantasia;
+	}
+	
+	public void setNomeDeFantasia(String nomeDeFantasia) {
+		this.nomeDeFantasia = nomeDeFantasia;
+	}
 
 	public String getCnpj() {
 		return cnpj;

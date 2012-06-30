@@ -1,1 +1,12 @@
-<?xml version="1.0" ?><pessoa-juridica><cnpj>8888-0000-8888</cnpj><inscricao-estadual>9999-9999-1111</inscricao-estadual></pessoa-juridica>
+<?xml version="1.0"?>
+<pessoa-juridica>
+
+    <cnpj>
+8888-0000-8888
+    </cnpj>
+
+    <inscricao-estadual>
+9999-9999-1111
+    </inscricao-estadual>
+
+</pessoa-juridica>

@@ -8,7 +8,7 @@ public class ReflectionMain {
 
 	public static void main(String[] args) {
 		
-		Class<?> clazz = Pessoa.class;
+		Class<?> clazz = PessoaJuridica.class;
 		System.out.println("Variáveis");
 		for ( Field f : clazz.getDeclaredFields() ) {			
 			System.out.printf( 
